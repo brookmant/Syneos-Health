@@ -1,0 +1,245 @@
+// custom variable
+$primary:       #134875;
+$secondary:     lightgray;
+$success:       lightgreen;
+$info:          purple;
+$warning:       darkyellow;
+$danger:        brightred;
+$light:         lightgray;
+$dark:          darkgray;
+$white:        #fff;
+$gray-400:      #333;
+$pink: #E33D79;
+$blue: #134875;
+
+$font: 'Open Sans', sans-serif;
+
+/*grid*/
+$grid-columns:      12;
+$grid-gutter-width: 30px;
+
+// import bootstrap
+@import url(node_modules/bootstrap/scss/bootstrap);
+@import url(node_modules/bootstrap/scss/bootstrap-grid);
+@import url(node_modules/bootstrap/scss/buttons);
+
+//font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+
+body {
+    margin: 0;
+    padding:0;
+    background: #f4f4f4;
+    font-family: $font;
+}
+// typography
+h1 {
+   //font-size:80px;
+   color: $white;
+       font-family: $font;
+
+}
+h2 {
+    font-size:58px;
+    font-weight: 600;
+        font-family: $font;
+
+ }
+h3 {
+   font-size:32px; 
+}
+h4 {
+    font-size:24px; 
+    font-weight:600;
+    color:$white;
+        font-family: $font;
+
+} 
+p {
+    font-size: 13px;
+        font-family: $font;
+
+}
+// nav
+nav {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    h5{
+        margin: 30px 55px;
+        text-align: left;
+        display: inline-flex;
+        font-family: $font;
+        color:$white;
+        font-weight: bold;
+        font-size:18px;
+
+    }
+    font-size: 18px;
+    font-weight: bold;
+    a {
+        display: inline-flex;
+        text-align: right;
+        text-decoration: none;
+        padding:0px 12px;
+        font-weight: 400;
+        font-family: $font;
+        color:$white;
+        font-size:14px;
+        &:last-child {
+            margin-right:55px;
+        }
+    }
+    
+}
+.template {
+    margin:0;
+    padding:0;
+}
+
+// component
+ .hero-callout {
+        padding: 200px 50px;
+        font-size:60px;
+        text-align: left;
+        letter-spacing: -3.2px;
+        width: 80%;
+        line-height: 50px;
+        font-family: $font;
+        h1 {
+            margin: 220px 0 0;
+            width: 70%;
+            font-size:58px;
+            letter-spacing: -3.2px;
+            color:$white;
+            opacity: 1;
+        }
+}
+.overlay-hero {
+    margin:-110px 0;
+    background-image: url('/assets/images/hero.jpg');
+    max-width: 1440px;
+    width:100%;
+    height: 900px;
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+//buttons
+.btn {
+    border-radius: 2em;
+}
+.primary-cta {
+    margin:24px 0;
+    padding: 10px 20px;
+    background-color: $pink;
+    font-size:14px;
+    color: $white;
+    display: block;
+    font-family: $font;
+    border-color:$pink;
+    &:hover {
+        opacity: 0.95;
+        border-color:$pink;
+        background-color: $pink;
+
+    }
+}
+.secondary-cta {
+    margin:24px 0;
+    padding: 10px 10px;
+    background-color: $white;
+    font-size:14px;
+    color: $pink;
+    display: block;
+    font-family: $font;
+    border-color:$white;
+    &:hover {
+        opacity: 0.95;
+        border-color:$white;
+        color: $pink;
+        background-color: $white;
+
+    }
+
+}
+.intro-callout {
+        margin:0;
+        padding: 100px 55px;
+        font-size:60px;
+        color:$white;
+        background-color: $blue;
+        text-align: left;
+        letter-spacing: -3.2px;
+        color: #FFFFFF;
+        width: 100%;
+        line-height: 50px;
+        font-family: $font;
+        h1 {
+            width: 50%;
+        }
+        p {
+            line-height: 22px;
+            font-size: 14px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            width: 50%;
+        }
+       
+}
+
+//article 
+.article-section {
+    padding-top:83px;
+    h2 {
+        padding: 0 20px;
+        font-size:24px;
+        color:  #E21D79;
+        text-align: left;
+    }
+}
+.article-grid {
+    margin: 20 0px;
+    column-gap: 30px;
+    column-count: 2;
+    max-width: 100%
+}
+ article {
+    max-width: 580px;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    width:100%;
+    
+     h3 {
+        color: $blue !important;
+        font-size: 32px;
+        line-height: 32px;
+        display:block;
+    }
+    img {
+        margin: 10px 0;
+        max-width: 530px;
+        display:block;
+      }
+      .tag {
+        margin: 15px 0;
+        padding:5px 10px;
+        font-size:13px;
+        display: inline-flex;
+        width: auto;
+        &.green {
+             background-color: #62DAAC;
+             color: $blue;
+        }
+        &.blue {
+            background-color: $blue;
+            color: $white;
+        }
+        
+      } 
+      .date {
+          font-size: 12px;
+          color: $gray-400;
+          display:block;
+      } 
+    }
