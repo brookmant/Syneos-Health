@@ -20,17 +20,38 @@
 <div class="template">
     <nav class="navbar sticky-sm-top justify-content-between">
       <div class="container-fluid">
+        <div class="nav-logo">
               <img class="logo" src="/assets/images/logo-light.jpg" alt="Logo">
-              <div class="col-3 text-left">
-                <h5>logoisum</h5>
+               <button class="navbar-toggler third-button" type="button" data-toggle="collapse"
+                 data-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22" aria-expanded="false"
+                 aria-label="Toggle navigation">
+                 <div class="animated-icon3"><span></span><span></span><span></span></div>
+               </button>
+
+        </div>
+              <div class="col-10 nav-list-desktop text-right">
+                <h5 class="col-auto mr-auto">logoisum</h5>
+
+                <div class="col-auto">
+                    <a href="#">Nulla</a>
+                    <a href="#">Viverra</a>
+                    <a href="#">Accumsan</a>
+                    <a href="#">Ullamcorper</a>
+                    <a href="#">Ullamcorper</a>
+                </div>
+
               </div>
-              <div class="col-9 text-right">
-                  <a href="#">Nulla</a>
-                  <a href="#">Viverra</a>
-                  <a href="#">Accumsan</a>
-                  <a href="#">Ullamcorper</a>
-                  <a href="#">Ullamcorper</a>
+              <!-- mobile nav -->
+              <div class="col-9 nav-list text-left collapse navbar-collapse" id="navbarSupportedContent1">
+
+                <a href="#">Nulla</a>
+                <a href="#">Viverra</a>
+                <a href="#">Accumsan</a>
+                <a href="#">Ullamcorper</a>
+                <a href="#">Ullamcorper</a>
+
               </div>
+                 <!-- Collapsible content --> 
             </div>
       </div>
     </nav>
@@ -114,30 +135,77 @@
           <h2>Lorem ipsum dolor</h2>
           <div class="divider"></div>
 
-          <div class="image-card">
-              <span>Lorem morbi</span>
-              <h3>Vestibulum nec tempor elit. </h3>
-              <img src="/assets/images/article-image1.jpg">
+          <div id="cardCarousel" class="carousel slide w-100" data-ride="carousel">
+            <div class="carousel-inner w-100" role="listbox">
+              <div class="carousel-item active">
+                <div class="col-md-4">
+                  <div class="image-card">
+                    <span>1 Lorem morbi</span>
+                    <h3>Vestibulum nec tempor elit. </h3>
+                    <img src="/assets/images/article-image1.jpg">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="image-card">
+                    <span>2 Lorem morbi</span>
+                    <h3>Vestibulum nec tempor elit. </h3>
+                    <img src="/assets/images/article-image1.jpg">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="image-card">
+                    <span>3 Lorem morbi</span>
+                    <h3>Vestibulum nec tempor elit. </h3>
+                    <img src="/assets/images/article-image1.jpg">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="image-card">
+                    <span>Lorem morbi</span>
+                    <h3>Vestibulum nec tempor elit. </h3>
+                    <img src="/assets/images/article-image1.jpg">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="image-card">
+                    <span>4 Lorem morbi</span>
+                    <h3>Vestibulum nec tempor elit. </h3>
+                    <img src="/assets/images/article-image1.jpg">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-md-4">
+                  <div class="image-card">
+                    <span>Lorem morbi</span>
+                    <h3>Vestibulum nec tempor elit. </h3>
+                    <img src="/assets/images/article-image1.jpg">
+                  </div>
+                </div>
+              </div>
             </div>
-             <div class="image-card">
-               <span>Lorem morbi</span>
-                <h3>Vestibulum nec tempor elit. </h3>
-               <img src="/assets/images/article-image1.jpg">
-             </div>
-              <div class="image-card">
-                <span>Lorem morbi</span>
-                 <h3>Vestibulum nec tempor elit. </h3>
-                <img src="/assets/images/article-image1.jpg">
-              </div>
-              <div class="image-card">
-                <span>Lorem morbi</span>
-                 <h3>Vestibulum nec tempor elit. </h3>
-                <img src="/assets/images/article-image1.jpg">
-              </div>
+            <a class="carousel-control-prev w-auto" href="#cardCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
+                aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next w-auto" href="#cardCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
+                aria-hidden="true"></span>
+            </a>
           </div>
         </div>
       </div>
     </div>
+
+    
 
     <footer class="pt-4 border-top">
       <div class="row">
@@ -146,12 +214,13 @@
             height="">
         </div>
         <div class="col-6 col-md text-right">
+          <a href="#top">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
             class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
               d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z" />
           </svg>
-        
+        </a>
         </div>
       </div>
     </footer>
@@ -169,6 +238,40 @@
   </script>
   <script src="node_modules/bootstrap/js/dist/button.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+    //nav toggle
+    $('.third-button').on('click', function () {
+
+    $('.animated-icon3').toggleClass('open');
+    $('#navbarSupportedContent1').toggleClass('active');
+    });
+
+    // to top
+    $("a[href='#top']").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+    });
+  
+    //carouse
+    $('#cardCarousel').carousel({
+    interval: 10000
+    })
+
+    $('.carousel .carousel-item').each(function(){
+    var minPerSlide = 4;
+    var next = $(this).next();
+    if (!next.length) {
+    next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    for (var i=0;i<minPerSlide;i++) { next=next.next(); if (!next.length) { next=$(this).siblings(':first'); }
+      next.children(':first-child').clone().appendTo($(this)); } });
+        });
+
+  </script>
 
 </body>
 
