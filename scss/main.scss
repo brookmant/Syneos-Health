@@ -11,12 +11,26 @@ $white:        #fff;
 $gray-400:      #333;
 $pink: #E33D79;
 $blue: #134875;
+$green: #62DAAC;
 
 $font: 'Open Sans', sans-serif;
 
 /*grid*/
 $grid-columns:      12;
 $grid-gutter-width: 30px;
+
+//responsive
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1140px) { }
 
 // import bootstrap
 @import url(node_modules/bootstrap/scss/bootstrap);
@@ -30,7 +44,7 @@ $grid-gutter-width: 30px;
 body {
     margin: 0;
     padding:0;
-    background: #f4f4f4;
+    background: #fff;
     font-family: $font;
 }
 // typography
@@ -61,12 +75,32 @@ p {
         font-family: $font;
 
 }
+.text-right {
+    text-align: right;
+
+}
+.text-left {
+    text-align: left;
+}
 // nav
+.logo {
+    width: 150px;
+    display:block;
+    @media (min-width: 768px) {
+        display: none;
+        } 
+    }
 nav {
-    background: transparent;
-    margin: 0;
-    padding: 0;
+    background: $white;
+    @media (min-width: 768px) {
+        background: transparent;
+        margin: 0;
+        padding: 0;
+    }
+
     h5{
+        display:none;
+        @media (min-width: 768px) {
         margin: 30px 55px;
         text-align: left;
         display: inline-flex;
@@ -74,19 +108,25 @@ nav {
         color:$white;
         font-weight: bold;
         font-size:18px;
+        display:block;
+        }
 
     }
     font-size: 18px;
     font-weight: bold;
     a {
-        display: inline-flex;
-        text-align: right;
-        text-decoration: none;
-        padding:0px 12px;
-        font-weight: 400;
-        font-family: $font;
-        color:$white;
-        font-size:14px;
+        display:flex;
+        margin: 15px;
+        @media (min-width: 768px) {
+            display: inline-flex;
+            text-align: right;
+            text-decoration: none;
+            padding:0px 12px;
+            font-weight: 400;
+            font-family: $font;
+            color:$white;
+            font-size:14px;
+        }
         &:last-child {
             margin-right:55px;
         }
@@ -100,20 +140,28 @@ nav {
 
 // component
  .hero-callout {
-        padding: 200px 50px;
+        padding: 30px 20px;
         font-size:60px;
         text-align: left;
         letter-spacing: -3.2px;
-        width: 80%;
+        width: 100%;
         line-height: 50px;
         font-family: $font;
+        @media (min-width: 768px) {
+            padding: 200px 50px;
+            width: 80%;
+        }
         h1 {
+            width: 100%;
+
+            @media (min-width: 768px) {
             margin: 220px 0 0;
             width: 70%;
             font-size:58px;
             letter-spacing: -3.2px;
             color:$white;
             opacity: 1;
+            }
         }
 }
 .overlay-hero {
@@ -176,14 +224,20 @@ nav {
         line-height: 50px;
         font-family: $font;
         h1 {
-            width: 50%;
+            width:100%;
+            @media (min-width: 768px) {
+                width: 50%;
+            }
         }
         p {
+            width: 100%;
             line-height: 22px;
             font-size: 14px;
             font-weight: normal;
             letter-spacing: 1px;
-            width: 50%;
+            @media (min-width: 768px) {
+                width: 50%;
+            }
         }
        
 }
@@ -191,6 +245,7 @@ nav {
 //article 
 .article-section {
     padding-top:83px;
+    background-color: $white;
     h2 {
         padding: 0 20px;
         font-size:24px;
@@ -199,10 +254,12 @@ nav {
     }
 }
 .article-grid {
-    margin: 20 0px;
-    column-gap: 30px;
-    column-count: 2;
-    max-width: 100%
+    @media (min-width: 768px) {
+        margin: 20 0px;
+        column-gap: 30px;
+        column-count: 2;
+        max-width: 100%
+        }
 }
  article {
     max-width: 580px;
@@ -219,6 +276,7 @@ nav {
     img {
         margin: 10px 0;
         max-width: 530px;
+        width:100%;
         display:block;
       }
       .tag {
@@ -228,7 +286,7 @@ nav {
         display: inline-flex;
         width: auto;
         &.green {
-             background-color: #62DAAC;
+             background-color: $green;
              color: $blue;
         }
         &.blue {
@@ -243,3 +301,69 @@ nav {
           display:block;
       } 
     }
+
+.image-cards-section {
+    overflow-y: scroll;
+    h2 {
+        padding: 0 20px;
+        font-size:24px;
+        color:  $pink;
+        text-align: left;
+
+    } 
+    .divider {
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        margin:30px;
+        height: 2px;
+    }
+    .image-card {
+        width:100%;
+        padding:0;
+        display: inline-grid;
+        background-color: $green;
+        margin:20px 0;
+        
+        @media (min-width: 768px) {
+                max-width: 300px;
+                margin:20px;
+        }
+
+        span {
+            padding: 30px 30px;
+            font-size:10px;
+            color: $blue;
+            display:block;
+        }
+        h3 {
+            padding: 5px 30px;
+            font-size:24px;
+            color: $blue;
+            display:block;
+        }
+        img {
+            width:100%;
+            display: block;
+             @media (min-width: 768px) {
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+footer {
+    background-color:#FAFAFA;
+    padding:20px;
+    margin:0;
+    .logo {
+        display: block !important;
+    }
+    .top {
+        svg {
+          text-align: right;
+          color: #333;
+          font-size:30px;
+        }
+    
+    }
+}
