@@ -1,4 +1,7 @@
 Test Template
+
+Technical Issues
+Could not get grid or assets for images from PDF so improvised.
 I do not have ADOBE XD
 https://helpx.adobe.com/xd/system-requirements.html
 Needed Operating system macOS v10.14 or later
